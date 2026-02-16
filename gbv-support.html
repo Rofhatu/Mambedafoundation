@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBV Support - Mambeda Foundation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .resource-header {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            color: white;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 60px 0;
+        }
+        .support-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .support-card i {
+            font-size: 3rem;
+            color: #9b59b6;
+            margin-bottom: 20px;
+        }
+        .support-card h3 {
+            color: #023e8a;
+            margin-bottom: 15px;
+        }
+        .support-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #9b59b6;
+            margin: 20px 0;
+        }
+        .support-btn {
+            background: #9b59b6;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        .support-btn:hover {
+            background: #8e44ad;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(155,89,182,0.3);
+        }
+        .emergency-box {
+            background: #f8d7da;
+            border: 2px solid #f5c6cb;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .emergency-box h3 {
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-container">
+                    <img src="images/logo.png" alt="Mambeda Foundation Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h2><span class="logo-primary">Mambeda</span> Foundation</h2>
+                        <p class="logo-tagline">Dream. Apply. Achieve.</p>
+                    </div>
+                </div>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#programs">Programs</a></li>
+                <li><a href="index.html#get-involved">Get Involved</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="donate.html" class="donate-btn">Donate Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="resource-header">
+        <div class="container">
+            <h1><i class="fas fa-shield-alt"></i> GBV Support</h1>
+            <p>Immediate help and support for survivors of gender-based violence</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="support-grid">
+            <div class="support-card">
+                <i class="fas fa-phone-alt"></i>
+                <h3>24/7 GBV Helpline</h3>
+                <div class="support-number">0800 428 428</div>
+                <p style="color: #666; margin-bottom: 20px;">Toll-free • Confidential • 24 hours</p>
+                <button class="support-btn" onclick="window.location.href='tel:0800428428'">
+                    <i class="fas fa-phone"></i> Call Now
+                </button>
+            </div>
+
+            <div class="support-card">
+                <i class="fas fa-gavel"></i>
+                <h3>Legal Aid</h3>
+                <div class="support-number">0800 110 110</div>
+                <p style="color: #666; margin-bottom: 20px;">Free legal assistance • Court support</p>
+                <button class="support-btn" onclick="window.location.href='tel:0800110110'">
+                    <i class="fas fa-phone"></i> Call Legal Aid
+                </button>
+            </div>
+        </div>
+
+        <div class="emergency-box">
+            <h3><i class="fas fa-exclamation-triangle"></i> Immediate Danger?</h3>
+            <p style="color: #721c24; font-size: 1.2rem; margin: 20px 0;">Call SAPS: 10111 | Ambulance: 10177</p>
+            <div style="display: flex; gap: 20px; justify-content: center;">
+                <button class="btn btn-primary" onclick="window.location.href='tel:10111'" style="background: #dc3545;">Call SAPS</button>
+                <button class="btn btn-primary" onclick="window.location.href='tel:10177'" style="background: #28a745;">Call Ambulance</button>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 40px 0;">
+            <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3><span class="logo-primary">Mambeda</span> Foundation</h3>
+                    <p>Empowering individuals through education, employment, addiction recovery, GBV prevention, and community support.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="gbv-support.html">GBV Support</a></li>
+                        <li><a href="addiction-helpline.html">Addiction Helpline</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mambeda Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

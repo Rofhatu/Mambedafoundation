@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Stories - Mambeda Foundation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .resource-header {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            padding: 60px 0;
+        }
+        .story-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .story-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        .story-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #0077b6, #00b4d8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 5rem;
+        }
+        .story-content {
+            padding: 30px;
+        }
+        .story-content h3 {
+            color: #023e8a;
+            margin-bottom: 10px;
+        }
+        .story-tag {
+            display: inline-block;
+            background: #e3f2fd;
+            color: #0077b6;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        .story-quote {
+            font-style: italic;
+            color: #666;
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #0077b6;
+        }
+        .read-more-btn {
+            background: none;
+            border: 2px solid #0077b6;
+            color: #0077b6;
+            padding: 10px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .read-more-btn:hover {
+            background: #0077b6;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-container">
+                    <img src="images/logo.png" alt="Mambeda Foundation Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h2><span class="logo-primary">Mambeda</span> Foundation</h2>
+                        <p class="logo-tagline">Dream. Apply. Achieve.</p>
+                    </div>
+                </div>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#programs">Programs</a></li>
+                <li><a href="index.html#get-involved">Get Involved</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="donate.html" class="donate-btn">Donate Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="resource-header">
+        <div class="container">
+            <h1><i class="fas fa-star"></i> Success Stories</h1>
+            <p>Real stories of lives transformed through our programs</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="stories-grid">
+            <!-- Story 1 -->
+            <div class="story-card">
+                <div class="story-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="story-content">
+                    <span class="story-tag">Addiction Recovery</span>
+                    <h3>Thabo Molefe</h3>
+                    <p><strong>From addiction to employment</strong></p>
+                    <div class="story-quote">
+                        "Mambeda Foundation didn't just save my life—they gave me purpose. After 10 years of addiction, I'm now 18 months sober and working as a peer counselor."
+                    </div>
+                    <button class="read-more-btn" onclick="showFullStory('thabo')">Read Full Story</button>
+                </div>
+            </div>
+
+            <!-- Story 2 -->
+            <div class="story-card">
+                <div class="story-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="story-content">
+                    <span class="story-tag">GBV Survivor to Entrepreneur</span>
+                    <h3>Precious Ndlovu</h3>
+                    <p><strong>From survivor to business owner</strong></p>
+                    <div class="story-quote">
+                        "Mambeda gave me wings. After escaping abuse, I received counseling and business training. Now I run my own catering business employing other survivors."
+                    </div>
+                    <button class="read-more-btn" onclick="showFullStory('precious')">Read Full Story</button>
+                </div>
+            </div>
+
+            <!-- Story 3 -->
+            <div class="story-card">
+                <div class="story-image">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="story-content">
+                    <span class="story-tag">Community Impact</span>
+                    <h3>Mambedani Computer Lab</h3>
+                    <p><strong>Bridging the digital divide</strong></p>
+                    <div class="story-quote">
+                        "Our community computer lab has trained over 200 youth in digital skills. 45 have found online work, and 30 have enrolled in further education."
+                    </div>
+                    <button class="read-more-btn" onclick="showFullStory('community')">Read Full Story</button>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 40px 0;">
+            <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Full Story Modal (hidden by default) -->
+    <div id="storyModal" class="modal" style="display: none;">
+        <div class="modal-content" style="max-width: 600px;">
+            <span class="close-modal" onclick="document.getElementById('storyModal').style.display='none'; document.body.style.overflow='auto';">&times;</span>
+            <div id="storyContent"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3><span class="logo-primary">Mambeda</span> Foundation</h3>
+                    <p>Empowering individuals through education, employment, addiction recovery, GBV prevention, and community support.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="success-stories.html">Success Stories</a></li>
+                        <li><a href="annual-report.html">Annual Report</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mambeda Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showFullStory(story) {
+            const modal = document.getElementById('storyModal');
+            const content = document.getElementById('storyContent');
+            
+            if (story === 'thabo') {
+                content.innerHTML = `
+                    <h2>Thabo's Journey: From Addiction to Employment</h2>
+                    <p>Thabo Molefe, 34, from Soweto, struggled with substance abuse for over a decade after losing his job. "I had given up hope. Every day was a battle."</p>
+                    <p>In 2024, Thabo found Mambeda Foundation's addiction recovery program. Through counseling, life skills training, and unwavering support, he completed a 6-month rehabilitation program.</p>
+                    <p>Today, Thabo is 18 months sober and works as a peer counselor at our foundation. He is now training to become a certified addiction counselor.</p>
+                    <p><strong>"Mambeda didn't just save my life—they gave me purpose. Now I help others find their way back."</strong></p>
+                `;
+            } else if (story === 'precious') {
+                content.innerHTML = `
+                    <h2>Precious's Triumph: From Survivor to Business Owner</h2>
+                    <p>Precious Ndlovu, 28, escaped an abusive relationship with nothing but her two children. "I was broken, scared, and didn't know where to turn."</p>
+                    <p>Mambeda Foundation provided emergency shelter, counseling, and legal support. Through our GBV program, Precious received trauma counseling and joined our small business development training.</p>
+                    <p>Today, Precious runs "Precious Catering," employing three other GBV survivors from our program.</p>
+                    <p><strong>"Mambeda gave me wings. Now I help other women fly."</strong></p>
+                `;
+            } else if (story === 'community') {
+                content.innerHTML = `
+                    <h2>Mambedani Computer Lab: Bridging the Digital Divide</h2>
+                    <p>In rural Mambedani, access to technology was almost non-existent. Young people were being left behind in a digital world.</p>
+                    <p>In 2025, Mambeda Foundation opened a community computer lab with 20 workstations. The lab offers free training in basic computer skills, Microsoft Office, and online job searching.</p>
+                    <p>To date, over 200 youth have been trained. 45 have found online work, and 30 have enrolled in further education using digital skills.</p>
+                    <p><strong>"This lab changed our community. Our young people now have skills for the future."</strong></p>
+                `;
+            }
+            
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

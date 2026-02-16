@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Guide - Mambeda Foundation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .resource-header {
+            background: linear-gradient(135deg, #00b4d8, #0077b6);
+            color: white;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+        .guide-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            padding: 60px 0;
+        }
+        .guide-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        .guide-card h2 {
+            color: #023e8a;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .guide-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #0077b6;
+        }
+        .guide-section h3 {
+            color: #0077b6;
+            margin-bottom: 15px;
+        }
+        .guide-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .guide-section ul li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #dee2e6;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .guide-section ul li i {
+            color: #2ecc71;
+        }
+        .tip-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        .tip-box i {
+            color: #ffc107;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-container">
+                    <img src="images/logo.png" alt="Mambeda Foundation Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h2><span class="logo-primary">Mambeda</span> Foundation</h2>
+                        <p class="logo-tagline">Dream. Apply. Achieve.</p>
+                    </div>
+                </div>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#programs">Programs</a></li>
+                <li><a href="index.html#get-involved">Get Involved</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="donate.html" class="donate-btn">Donate Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="resource-header">
+        <div class="container">
+            <h1><i class="fas fa-book"></i> Application Guide</h1>
+            <p>Step-by-step guides for job and education applications</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="guide-container">
+            <!-- Job Application Guide -->
+            <div class="guide-card">
+                <h2><i class="fas fa-briefcase" style="color: #0077b6;"></i> Job Application Guide</h2>
+                
+                <div class="guide-section">
+                    <h3>📝 Step 1: Prepare Your Documents</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Updated CV/Resume</li>
+                        <li><i class="fas fa-check"></i> Cover letter template</li>
+                        <li><i class="fas fa-check"></i> Reference letters</li>
+                        <li><i class="fas fa-check"></i> Certificates and qualifications</li>
+                    </ul>
+                </div>
+
+                <div class="guide-section">
+                    <h3>🔍 Step 2: Find Opportunities</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Check online job portals (Indeed, LinkedIn, PNet)</li>
+                        <li><i class="fas fa-check"></i> Visit company websites</li>
+                        <li><i class="fas fa-check"></i> Network with professionals</li>
+                        <li><i class="fas fa-check"></i> Attend career fairs</li>
+                    </ul>
+                </div>
+
+                <div class="guide-section">
+                    <h3>📧 Step 3: Submit Application</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Follow application instructions carefully</li>
+                        <li><i class="fas fa-check"></i> Customize cover letter for each job</li>
+                        <li><i class="fas fa-check"></i> Proofread everything</li>
+                        <li><i class="fas fa-check"></i> Submit before deadline</li>
+                    </ul>
+                </div>
+
+                <div class="guide-section">
+                    <h3>🤝 Step 4: Interview Preparation</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Research the company</li>
+                        <li><i class="fas fa-check"></i> Practice common questions</li>
+                        <li><i class="fas fa-check"></i> Prepare questions to ask</li>
+                        <li><i class="fas fa-check"></i> Dress professionally</li>
+                    </ul>
+                </div>
+
+                <div class="tip-box">
+                    <i class="fas fa-lightbulb"></i>
+                    <strong>Pro Tip:</strong> Always send a thank-you email within 24 hours after the interview.
+                </div>
+            </div>
+
+            <!-- Education Application Guide -->
+            <div class="guide-card">
+                <h2><i class="fas fa-university" style="color: #0077b6;"></i> Education Application Guide</h2>
+                
+                <div class="guide-section">
+                    <h3>🎓 Step 1: Research Options</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Universities and TVET colleges</li>
+                        <li><i class="fas fa-check"></i> Courses and requirements</li>
+                        <li><i class="fas fa-check"></i> Application deadlines</li>
+                        <li><i class="fas fa-check"></i> Tuition fees</li>
+                    </ul>
+                </div>
+
+                <div class="guide-section">
+                    <h3>📋 Step 2: Gather Requirements</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> ID document</li>
+                        <li><i class="fas fa-check"></i> Academic transcripts</li>
+                        <li><i class="fas fa-check"></i> Passport photos</li>
+                        <li><i class="fas fa-check"></i> Proof of residence</li>
+                    </ul>
+                </div>
+
+                <div class="guide-section">
+                    <h3>💰 Step 3: Funding Options</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> NSFAS applications</li>
+                        <li><i class="fas fa-check"></i> Bursaries and scholarships</li>
+                        <li><i class="fas fa-check"></i> Student loans</li>
+                        <li><i class="fas fa-check"></i> Part-time work options</li>
+                    </ul>
+                </div>
+
+                <div class="guide-section">
+                    <h3>✍️ Step 4: Personal Statement</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Why you chose this course</li>
+                        <li><i class="fas fa-check"></i> Your career goals</li>
+                        <li><i class="fas fa-check"></i> Relevant experience</li>
+                        <li><i class="fas fa-check"></i> What makes you unique</li>
+                    </ul>
+                </div>
+
+                <div class="tip-box">
+                    <i class="fas fa-lightbulb"></i>
+                    <strong>Pro Tip:</strong> Apply for multiple funding options and keep copies of all documents.
+                </div>
+            </div>
+        </div>
+
+        <!-- Common Questions Section -->
+        <div style="background: white; border-radius: 15px; padding: 40px; margin: 40px 0; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+            <h2 style="color: #023e8a; margin-bottom: 30px;"><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+            
+            <div style="margin-bottom: 20px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                <h3 style="color: #0077b6;">Q: How long should my CV be?</h3>
+                <p>A: For most jobs, 2 pages is ideal. Recent graduates can use 1 page.</p>
+            </div>
+            
+            <div style="margin-bottom: 20px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                <h3 style="color: #0077b6;">Q: When should I apply for university?</h3>
+                <p>A: Applications typically open in March-April for the following year. Apply as early as possible.</p>
+            </div>
+            
+            <div style="margin-bottom: 20px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                <h3 style="color: #0077b6;">Q: What if I don't meet all requirements?</h3>
+                <p>A: Contact the institution directly. Some offer alternative pathways or recognition of prior learning.</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 40px 0;">
+            <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3><span class="logo-primary">Mambeda</span> Foundation</h3>
+                    <p>Empowering individuals through education, employment, addiction recovery, GBV prevention, and community support.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="resume-templates.html">Resume Templates</a></li>
+                        <li><a href="application-guide.html">Application Guide</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mambeda Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

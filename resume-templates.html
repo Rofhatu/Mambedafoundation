@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS-Friendly CV Templates - Mambeda Foundation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .resource-header {
+            background: linear-gradient(135deg, #0077b6, #023e8a);
+            color: white;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+        .resource-header h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .ats-badge {
+            background: #2ecc71;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        .templates-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 60px 0;
+        }
+        .template-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+        .template-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,119,182,0.2);
+        }
+        .template-preview {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 1px solid #dee2e6;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .template-preview:hover {
+            background: #e9ecef;
+        }
+        .template-preview i {
+            font-size: 4rem;
+            color: #0077b6;
+            margin-bottom: 10px;
+        }
+        .template-info {
+            padding: 30px;
+        }
+        .template-info h3 {
+            color: #023e8a;
+            margin-bottom: 10px;
+        }
+        .ats-tag {
+            background: #e3f2fd;
+            color: #0077b6;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .template-features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .template-features li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #dee2e6;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .template-features li i {
+            color: #2ecc71;
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .btn-view {
+            background: linear-gradient(135deg, #0077b6, #023e8a);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            flex: 1;
+            transition: all 0.3s ease;
+        }
+        .btn-view:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,119,182,0.3);
+        }
+        .btn-download {
+            background: #28a745;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            flex: 1;
+            transition: all 0.3s ease;
+        }
+        .btn-download:hover {
+            background: #218838;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(40,167,69,0.3);
+        }
+        .btn-back {
+            display: inline-block;
+            margin: 40px 0;
+            color: #0077b6;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .ats-tips {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+        .ats-tips h3 {
+            color: #856404;
+            margin-bottom: 20px;
+        }
+        .ats-tips ul li {
+            margin-bottom: 10px;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-container">
+                    <img src="images/logo.png" alt="Mambeda Foundation Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h2><span class="logo-primary">Mambeda</span> Foundation</h2>
+                        <p class="logo-tagline">Dream. Apply. Achieve.</p>
+                    </div>
+                </div>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#programs">Programs</a></li>
+                <li><a href="index.html#get-involved">Get Involved</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="donate.html" class="donate-btn">Donate Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="resource-header">
+        <div class="container">
+            <h1><i class="fas fa-file-alt"></i> ATS-Friendly CV Templates</h1>
+            <p>Professional CVs designed to pass Applicant Tracking Systems</p>
+            <div class="ats-badge">
+                <i class="fas fa-robot"></i> 100% ATS Compatible
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- ATS Tips Section -->
+        <div class="ats-tips">
+            <h3><i class="fas fa-lightbulb"></i> Tips for ATS-Friendly CVs:</h3>
+            <ul style="list-style: none;">
+                <li><i class="fas fa-check-circle" style="color: #28a745;"></i> Use standard fonts (Arial, Calibri, Times New Roman)</li>
+                <li><i class="fas fa-check-circle" style="color: #28a745;"></i> Save as PDF or Word document</li>
+                <li><i class="fas fa-check-circle" style="color: #28a745;"></i> Avoid tables, columns, and graphics</li>
+                <li><i class="fas fa-check-circle" style="color: #28a745;"></i> Include relevant keywords from the job description</li>
+                <li><i class="fas fa-check-circle" style="color: #28a745;"></i> Use standard section headings (Work Experience, Education, Skills)</li>
+            </ul>
+        </div>
+
+        <div class="templates-preview">
+            <!-- Professional Template -->
+            <div class="template-card">
+                <div class="template-preview" onclick="viewTemplate('professional')">
+                    <i class="fas fa-briefcase"></i>
+                    <p>Click to preview</p>
+                </div>
+                <div class="template-info">
+                    <span class="ats-tag"><i class="fas fa-robot"></i> ATS Optimized</span>
+                    <h3>Professional CV Template</h3>
+                    <p>Clean, traditional design perfect for corporate jobs, finance, law, and management positions.</p>
+                    <ul class="template-features">
+                        <li><i class="fas fa-check"></i> Standard ATS-friendly format</li>
+                        <li><i class="fas fa-check"></i> Clean professional layout</li>
+                        <li><i class="fas fa-check"></i> Includes cover letter template</li>
+                        <li><i class="fas fa-check"></i> Keyword-optimized sections</li>
+                        <li><i class="fas fa-check"></i> No tables or graphics</li>
+                    </ul>
+                    <div class="button-group">
+                        <button class="btn-view" onclick="viewTemplate('professional')">
+                            <i class="fas fa-eye"></i> View
+                        </button>
+                        <button class="btn-download" onclick="downloadTemplate('professional')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modern Template -->
+            <div class="template-card">
+                <div class="template-preview" onclick="viewTemplate('modern')">
+                    <i class="fas fa-chart-line"></i>
+                    <p>Click to preview</p>
+                </div>
+                <div class="template-info">
+                    <span class="ats-tag"><i class="fas fa-robot"></i> ATS Optimized</span>
+                    <h3>Modern CV Template</h3>
+                    <p>Contemporary design for marketing, sales, business development, and tech roles.</p>
+                    <ul class="template-features">
+                        <li><i class="fas fa-check"></i> Clean modern layout</li>
+                        <li><i class="fas fa-check"></i> Skills-focused sections</li>
+                        <li><i class="fas fa-check"></i> Achievement highlights</li>
+                        <li><i class="fas fa-check"></i> ATS-compatible formatting</li>
+                        <li><i class="fas fa-check"></i> Professional summary section</li>
+                    </ul>
+                    <div class="button-group">
+                        <button class="btn-view" onclick="viewTemplate('modern')">
+                            <i class="fas fa-eye"></i> View
+                        </button>
+                        <button class="btn-download" onclick="downloadTemplate('modern')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Entry Level Template -->
+            <div class="template-card">
+                <div class="template-preview" onclick="viewTemplate('entry')">
+                    <i class="fas fa-graduation-cap"></i>
+                    <p>Click to preview</p>
+                </div>
+                <div class="template-info">
+                    <span class="ats-tag"><i class="fas fa-robot"></i> ATS Optimized</span>
+                    <h3>Entry Level CV Template</h3>
+                    <p>Perfect for students, graduates, and first-time job seekers with limited experience.</p>
+                    <ul class="template-features">
+                        <li><i class="fas fa-check"></i> Skills-focused layout</li>
+                        <li><i class="fas fa-check"></i> Education highlight section</li>
+                        <li><i class="fas fa-check"></i> Volunteer experience</li>
+                        <li><i class="fas fa-check"></i> Achievements section</li>
+                        <li><i class="fas fa-check"></i> Internship showcase</li>
+                    </ul>
+                    <div class="button-group">
+                        <button class="btn-view" onclick="viewTemplate('entry')">
+                            <i class="fas fa-eye"></i> View
+                        </button>
+                        <button class="btn-download" onclick="downloadTemplate('entry')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Template -->
+            <div class="template-card">
+                <div class="template-preview" onclick="viewTemplate('technical')">
+                    <i class="fas fa-laptop-code"></i>
+                    <p>Click to preview</p>
+                </div>
+                <div class="template-info">
+                    <span class="ats-tag"><i class="fas fa-robot"></i> ATS Optimized</span>
+                    <h3>Technical CV Template</h3>
+                    <p>Ideal for IT, engineering, software development, and technical roles.</p>
+                    <ul class="template-features">
+                        <li><i class="fas fa-check"></i> Technical skills section</li>
+                        <li><i class="fas fa-check"></i> Project portfolio</li>
+                        <li><i class="fas fa-check"></i> Certifications highlight</li>
+                        <li><i class="fas fa-check"></i> Tools & technologies list</li>
+                        <li><i class="fas fa-check"></i> GitHub/portfolio links</li>
+                    </ul>
+                    <div class="button-group">
+                        <button class="btn-view" onclick="viewTemplate('technical')">
+                            <i class="fas fa-eye"></i> View
+                        </button>
+                        <button class="btn-download" onclick="downloadTemplate('technical')">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download All Button -->
+        <div style="text-align: center; margin: 40px 0;">
+            <button class="btn-view" style="padding: 15px 40px; font-size: 1.2rem;" onclick="downloadAllTemplates()">
+                <i class="fas fa-download"></i> Download All Templates (ZIP)
+            </button>
+        </div>
+
+        <div style="text-align: center; margin: 20px 0;">
+            <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Template Preview Modal -->
+    <div id="templateModal" class="modal" style="display: none;">
+        <div class="modal-content" style="max-width: 900px; background: #f8f9fa;">
+            <span class="close-modal" onclick="document.getElementById('templateModal').style.display='none'; document.body.style.overflow='auto';">&times;</span>
+            <div id="templateContent">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+            <div style="margin-top: 30px; text-align: center;">
+                <button class="btn-download" onclick="downloadCurrentTemplate()" style="padding: 15px 40px;">
+                    <i class="fas fa-download"></i> Download This CV
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3><span class="logo-primary">Mambeda</span> Foundation</h3>
+                    <p>Empowering individuals through education, employment, addiction recovery, GBV prevention, and community support.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#programs">Programs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="resume-templates.html">Resume Templates</a></li>
+                        <li><a href="application-guide.html">Application Guide</a></li>
+                        <li><a href="success-stories.html">Success Stories</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mambeda Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentTemplate = 'professional';
+        
+        function viewTemplate(type) {
+            currentTemplate = type;
+            const modal = document.getElementById('templateModal');
+            const content = document.getElementById('templateContent');
+            
+            if (type === 'professional') {
+                content.innerHTML = `
+                    <h2 style="color: #023e8a; margin-bottom: 20px;">Professional CV Template</h2>
+                    <div style="background: white; padding: 40px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); font-family: 'Arial', sans-serif;">
+                        <div style="text-align: center; margin-bottom: 30px;">
+                            <h1 style="font-size: 28px; color: #023e8a; margin-bottom: 5px;">JOHN DOE</h1>
+                            <p style="color: #666;">📍 Johannesburg, South Africa | 📞 +27 71 234 5678 | ✉️ john.doe@email.com</p>
+                            <p style="color: #666;">🔗 linkedin.com/in/johndoe</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <h3 style="color: #0077b6; border-bottom: 2px solid #0077b6; padding-bottom: 5px;">PROFESSIONAL SUMMARY</h3>
+                            <p style="line-height: 1.6;">Results-driven professional with 5+ years of experience in project management and team leadership. Proven track record of delivering projects on time and within budget. Skilled in stakeholder management, strategic planning, and process improvement.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <h3 style="color: #0077b6; border-bottom: 2px solid #0077b6; padding-bottom: 5px;">WORK EXPERIENCE</h3>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <div style="display: flex; justify-content: space-between;">
+                                    <strong>Senior Project Manager</strong>
+                                    <span style="color: #666;">2021 - Present</span>
+                                </div>
+                                <div style="color: #0077b6; margin-bottom: 10px;">ABC Corporation, Johannesburg</div>
+                                <ul style="margin-left: 20px; line-height: 1.6;">
+                                    <li>Lead cross-functional team of 15 members across 3 departments</li>
+                                    <li>Manage project budget of R2.5 million with 98% success rate</li>
+                                    <li>Implemented Agile methodologies, increasing delivery speed by 30%</li>
+                                    <li>Developed client relationships resulting in 40% repeat business</li>
+                                </ul>
+                            </div>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <div style="display: flex; justify-content: space-between;">
+                                    <strong>Project Coordinator</strong>
+                                    <span style="color: #666;">2018 - 2021</span>
+                                </div>
+                                <div style="color: #0077b6; margin-bottom: 10px;">XYZ Solutions, Pretoria</div>
+                                <ul style="margin-left: 20px; line-height: 1.6;">
+                                    <li>Coordinated 20+ projects simultaneously</li>
+                                    <li>Improved project documentation efficiency by 25%</li>
+                                    <li>Trained 10 new team members on project management tools</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <h3 style="color: #0077b6; border-bottom: 2px solid #0077b6; padding-bottom: 5px;">EDUCATION</h3>
+                            <div style="display: flex; justify-content: space-between;">
+                                <strong>Bachelor of Commerce in Project Management</strong>
+                                <span style="color: #666;">2014 - 2017</span>
+                            </div>
+                            <div style="color: #0077b6;">University of Johannesburg</div>
+                            <p>Graduated with Distinction, Dean's List 2016-2017</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <h3 style="color: #0077b6; border-bottom: 2px solid #0077b6; padding-bottom: 5px;">SKILLS</h3>
+                            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                                <div><strong>Technical:</strong> MS Project, JIRA, Trello, Asana</div>
+                                <div><strong>Languages:</strong> English (Fluent), Afrikaans (Intermediate)</div>
+                                <div><strong>Soft Skills:</strong> Leadership, Communication, Problem-solving</div>
+                                <div><strong>Certifications:</strong> PMP, Agile Scrum Master</div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 30px; padding-top: 20px; border-top: 2px dashed #dee2e6; text-align: center; color: #28a745;">
+                            <i class="fas fa-check-circle"></i> This template is 100% ATS-friendly - No tables, no graphics, standard fonts
+                        </div>
+                    </div>
+                `;
+            } else if (type === 'modern') {
+                content.innerHTML = `
+                    <h2 style="color: #023e8a; margin-bottom: 20px;">Modern CV Template</h2>
+                    <div style="background: white; padding: 40px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); font-family: 'Calibri', sans-serif;">
+                        <div style="margin-bottom: 30px;">
+                            <h1 style="font-size: 32px; color: #023e8a; margin-bottom: 5px;">JANE SMITH</h1>
+                            <p style="color: #0077b6; font-size: 18px;">Marketing Specialist</p>
+                            <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 15px;">
+                                <span><i class="fas fa-phone" style="color: #0077b6;"></i> +27 82 345 6789</span>
+                                <span><i class="fas fa-envelope" style="color: #0077b6;"></i> jane.smith@email.com</span>
+                                <span><i class="fas fa-map-marker-alt" style="color: #0077b6;"></i> Cape Town</span>
+                                <span><i class="fab fa-linkedin" style="color: #0077b6;"></i> linkedin.com/in/janesmith</span>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <h3 style="color: #0077b6; border-bottom: 2px solid #0077b6; padding-bottom: 5px;">PROFESSIONAL SUMMARY</h3>
+                            <p style="line-height: 1.6;">Innovative Marketing Specialist with 4 years of experience in digital marketing and brand management. Expertise in social media strategy, content creation, and data-driven campaign optimization. Passionate about driving engagement and increasing brand awareness.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <h3 style="color: #0077b6; border-bottom: 2px solid #0077b6; padding-bottom: 5px;">KEY ACHIEVEMENTS</h3>
+                            <ul style="margin-left: 20px; line-height: 1.8;">
+                                <li>Increased social media engagement by 150% within 6 months</li>
+                                <li>Launched successful campaign reaching 500K+ target audience</li>
+                                <li>Reduced customer acquisition cost by 25% through optimization</li>
+                                <li>Winner: Marketing Excellence Award 2024</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <h3 style="color: #0077b6; border-bottom: 2px solid #0077b6; padding-bottom: 5px;">WORK EXPERIENCE</h3>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <div style="display: flex; justify-content: space-between;">
+                                    <strong>Digital Marketing Manager</strong>
+                                    <span style="color: #666;">2022 - Present</span>
+                                </div>
+                                <div style="color: #0077b6;">Media Solutions, Cape Town</div>
+                                <ul style="margin-left: 20px; margin-top: 10px;">
+                                    <li>Manage R1.5M annual marketing budget</li>
+                                    <li>Lead team of 5 marketing specialists</li>
+                                    <li>Develop and execute comprehensive digital strategies</li>
+                                </ul>
+                            </div>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <div style="display: flex; justify-content: space-between;">
+                                    <strong>Marketing Coordinator</strong>
+                                    <span style="color: #666;">2019 - 2022</span>
+                                </div>
+                                <div style="color: #0077b6;">Brand Agency, Cape Town</div>
+                                <ul style="margin-left: 20px; margin-top: 10px;">
+                                    <li>Coordinated 30+ marketing campaigns annually</li>
+                                    <li>Managed social media accounts with 100K+ followers</li>
+                                    <li>Created content for multiple platforms</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <h3 style="color: #0077b6; border-bottom: 2px solid #0077b6; padding-bottom: 5px;">EDUCATION</h3>
+                            <div><strong>Bachelor of Arts in Marketing</strong> - University of Cape Town (2015-2018)</div>
+                            <div style="color: #666;">Graduated Cum Laude</div>
+                        </div>
+                        
+                        <div>
+                            <h3 style="color: #0077b6; border-bottom: 2px solid #0077b6; padding-bottom: 5px;">SKILLS</h3>
+                            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px;">
+                                <span style="background: #e3f2fd; padding: 5px 15px; border-radius: 20px;">SEO/SEM</span>
+                                <span style="background: #e3f2fd; padding: 5px 15px; border-radius: 20px;">Google Analytics</span>
+                                <span style="background: #e3f2fd; padding: 5px 15px; border-radius: 20px;">Social Media</span>
+                                <span style="background: #e3f2fd; padding: 5px 15px; border-radius: 20px;">Content Strategy</span>
+                                <span style="background: #e3f2fd; padding: 5px 15px; border-radius: 20px;">Email Marketing</span>
+                                <span style="background: #e3f2fd; padding: 5px 15px; border-radius: 20px;">Adobe Creative Suite</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else if (type === 'entry') {
+                content.innerHTML = `
+                    <h2 style="color: #023e8a; margin-bottom: 20px;">Entry Level CV Template</h2>
+                    <div style="background: white; padding: 40px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); font-family: 'Times New Roman', serif;">
+                        <div style="text-align: center; margin-bottom: 30px;">
+                            <h1 style="font-size: 26px; color: #023e8a;">THABO NDLOVU</h1>
+                            <p style="color: #666;">Recent Graduate | BCom Marketing</p>
+                            <div style="margin-top: 10px;">
+                                <span style="margin-right: 20px;"><i class="fas fa-phone" style="color: #0077b6;"></i> +27 73 456 7890</span>
+                                <span><i class="fas fa-envelope" style="color: #0077b6;"></i> thabo.n@email.com</span>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <h3 style="color: #0077b6; border-bottom: 1px solid #0077b6; padding-bottom: 5px;">EDUCATION</h3>
+                            <div style="margin-bottom: 15px;">
+                                <div style="display: flex; justify-content: space-between;">
+                                    <strong>Bachelor of Commerce in Marketing</strong>
+                                    <span style="color: #666;">2021 - 2024</span>
+                                </div>
+                                <div style="color: #0077b6;">University of Johannesburg</div>
+                                <ul style="margin-left: 20px; margin-top: 10px;">
+                                    <li>Graduated with Distinction (75% average)</li>
+                                    <li>Dean's Merit List 2023, 2024</li>
+                                    <li>Relevant coursework: Digital Marketing, Consumer Behavior, Market Research</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <h3 style="color: #0077b6; border-bottom: 1px solid #0077b6; padding-bottom: 5px;">INTERNSHIP EXPERIENCE</h3>
+                            <div style="margin-bottom: 15px;">
+                                <div style="display: flex; justify-content: space-between;">
+                                    <strong>Marketing Intern</strong>
+                                    <span style="color: #666;">Jan 2024 - Jun 2024</span>
+                                </div>
+                                <div style="color: #0077b6;">Digital Innovations, Johannesburg</div>
+                                <ul style="margin-left: 20px; margin-top: 10px;">
+                                    <li>Assisted in managing social media accounts (Instagram, Facebook, LinkedIn)</li>
+                                    <li>Created 20+ content pieces for marketing campaigns</li>
+                                    <li>Analyzed campaign performance using Google Analytics</li>
+                                    <li>Contributed to weekly marketing strategy meetings</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <h3 style="color: #0077b6; border-bottom: 1px solid #0077b6; padding-bottom: 5px;">VOLUNTEER EXPERIENCE</h3>
+                            <div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <strong>Social Media Volunteer</strong>
+                                    <span style="color: #666;">2023 - 2024</span>
+                                </div>
+                                <div style="color: #0077b6;">Community Youth Organization</div>
+                                <ul style="margin-left: 20px; margin-top: 10px;">
+                                    <li>Managed social media presence for non-profit organization</li>
+                                    <li>Increased followers by 50% through consistent engagement</li>
+                                    <li>Designed promotional materials for community events</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <h3 style="color: #0077b6; border-bottom: 1px solid #0077b6; padding-bottom: 5px;">SKILLS</h3>
+                            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                                <div><strong>Marketing:</strong> Social Media, Content Creation</div>
+                                <div><strong>Tools:</strong> Canva, Google Analytics, MS Office</div>
+                                <div><strong>Languages:</strong> English, Zulu, Afrikaans</div>
+                                <div><strong>Soft Skills:</strong> Communication, Teamwork, Creativity</div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <h3 style="color: #0077b6; border-bottom: 1px solid #0077b6; padding-bottom: 5px;">ACHIEVEMENTS</h3>
+                            <ul style="margin-left: 20px;">
+                                <li>Winner: University Marketing Case Competition 2024</li>
+                                <li>Student Leadership Award 2023</li>
+                                <li>Certified in Google Digital Marketing Fundamentals</li>
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            } else if (type === 'technical') {
+                content.innerHTML = `
+                    <h2 style="color: #023e8a; margin-bottom: 20px;">Technical CV Template</h2>
+                    <div style="background: white; padding: 40px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); font-family: 'Courier New', monospace;">
+                        <div style="margin-bottom: 30px;">
+                            <h1 style="font-size: 28px; color: #023e8a;">SIYA NKOSI</h1>
+                            <p style="color: #0077b6; font-size: 16px;">Full Stack Developer | Software Engineer</p>
+                            <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 10px;">
+                                <span><i class="fas fa-phone"></i> +27 81 567 8901</span>
+                                <span><i class="fas fa-envelope"></i> siya.nkosi@email.com</span>
+                                <span><i class="fab fa-github"></i> github.com/siyankosi</span>
+                                <span><i class="fab fa-linkedin"></i> linkedin.com/in/siyankosi</span>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <h3 style="color: #0077b6; border-bottom: 2px solid #0077b6;">TECHNICAL SUMMARY</h3>
+                            <p>Full Stack Developer with 3 years of experience building web applications. Proficient in JavaScript, Python, and cloud technologies. Passionate about creating efficient, scalable solutions and writing clean code.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <h3 style="color: #0077b6; border-bottom: 2px solid #0077b6;">TECHNICAL SKILLS</h3>
+                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 15px;">
+                                <div>
+                                    <strong>Frontend:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 5px;">
+                                        <li>React.js</li>
+                                        <li>JavaScript/ES6</li>
+                                        <li>HTML5/CSS3</li>
+                                        <li>TypeScript</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <strong>Backend:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 5px;">
+                                        <li>Node.js</li>
+                                        <li>Python</li>
+                                        <li>Express.js</li>
+                                        <li>Django</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <strong>Tools & Others:</strong>
+                                    <ul style="margin-left: 15px; margin-top: 5px;">
+                                        <li>Git/GitHub</li>
+                                        <li>Docker</li>
+                                        <li>AWS</li>
+                                        <li>MongoDB</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <h3 style="color: #0077b6; border-bottom: 2px solid #0077b6;">PROJECTS</h3>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <strong>E-Commerce Platform</strong> | React, Node.js, MongoDB
+                                <ul style="margin-left: 20px; margin-top: 5px;">
+                                    <li>Built full-stack e-commerce application with user authentication</li>
+                                    <li>Implemented payment gateway integration (PayFast)</li>
+                                    <li>Deployed on AWS with 99.9% uptime</li>
+                                    <li>GitHub: github.com/siyankosi/ecommerce-app</li>
+                                </ul>
+                            </div>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <strong>Task Management App</strong> | Python, Django, PostgreSQL
+                                <ul style="margin-left: 20px; margin-top: 5px;">
+                                    <li>Developed collaborative task management tool for teams</li>
+                                    <li>Implemented real-time updates using WebSockets</li>
+                                    <li>Containerized with Docker for easy deployment</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <strong>Portfolio Website</strong> | HTML, CSS, JavaScript
+                                <ul style="margin-left: 20px; margin-top: 5px;">
+                                    <li>Designed and developed personal portfolio showcasing projects</li>
+                                    <li>Optimized for performance and SEO</li>
+                                    <li>View at: siyankosi.dev</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <h3 style="color: #0077b6; border-bottom: 2px solid #0077b6;">WORK EXPERIENCE</h3>
+                            <div style="margin-bottom: 15px;">
+                                <div style="display: flex; justify-content: space-between;">
+                                    <strong>Junior Developer</strong>
+                                    <span style="color: #666;">2023 - Present</span>
+                                </div>
+                                <div style="color: #0077b6;">Tech Solutions, Johannesburg</div>
+                                <ul style="margin-left: 20px; margin-top: 5px;">
+                                    <li>Develop and maintain client websites and applications</li>
+                                    <li>Collaborate with design team to implement UI/UX improvements</li>
+                                    <li>Participate in code reviews and agile ceremonies</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 style="color: #0077b6; border-bottom: 2px solid #0077b6;">CERTIFICATIONS</h3>
+                            <ul style="margin-left: 20px;">
+                                <li>AWS Certified Cloud Practitioner (2024)</li>
+                                <li>Meta Frontend Developer Certificate (2023)</li>
+                                <li>Google IT Automation with Python (2023)</li>
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function downloadTemplate(type) {
+            const button = event.target.closest('button');
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing...';
+            button.disabled = true;
+            
+            setTimeout(() => {
+                // Create a sample text file with CV content
+                let content = '';
+                let filename = '';
+                
+                if (type === 'professional') {
+                    content = `JOHN DOE
+📍 Johannesburg, South Africa | 📞 +27 71 234 5678 | ✉️ john.doe@email.com
+🔗 linkedin.com/in/johndoe
+
+PROFESSIONAL SUMMARY
+Results-driven professional with 5+ years of experience in project management and team leadership. Proven track record of delivering projects on time and within budget. Skilled in stakeholder management, strategic planning, and process improvement.
+
+WORK EXPERIENCE
+Senior Project Manager | ABC Corporation, Johannesburg | 2021 - Present
+• Lead cross-functional team of 15 members across 3 departments
+• Manage project budget of R2.5 million with 98% success rate
+• Implemented Agile methodologies, increasing delivery speed by 30%
+• Developed client relationships resulting in 40% repeat business
+
+Project Coordinator | XYZ Solutions, Pretoria | 2018 - 2021
+• Coordinated 20+ projects simultaneously
+• Improved project documentation efficiency by 25%
+• Trained 10 new team members on project management tools
+
+EDUCATION
+Bachelor of Commerce in Project Management | University of Johannesburg | 2014 - 2017
+Graduated with Distinction, Dean's List 2016-2017
+
+SKILLS
+Technical: MS Project, JIRA, Trello, Asana
+Languages: English (Fluent), Afrikaans (Intermediate)
+Soft Skills: Leadership, Communication, Problem-solving
+Certifications: PMP, Agile Scrum Master`;
+                    filename = 'professional_cv_template.docx';
+                    
+                } else if (type === 'modern') {
+                    content = `JANE SMITH
+Marketing Specialist
+📞 +27 82 345 6789 | ✉️ jane.smith@email.com | 📍 Cape Town
+🔗 linkedin.com/in/janesmith
+
+PROFESSIONAL SUMMARY
+Innovative Marketing Specialist with 4 years of experience in digital marketing and brand management. Expertise in social media strategy, content creation, and data-driven campaign optimization. Passionate about driving engagement and increasing brand awareness.
+
+KEY ACHIEVEMENTS
+• Increased social media engagement by 150% within 6 months
+• Launched successful campaign reaching 500K+ target audience
+• Reduced customer acquisition cost by 25% through optimization
+• Winner: Marketing Excellence Award 2024
+
+WORK EXPERIENCE
+Digital Marketing Manager | Media Solutions, Cape Town | 2022 - Present
+• Manage R1.5M annual marketing budget
+• Lead team of 5 marketing specialists
+• Develop and execute comprehensive digital strategies
+
+Marketing Coordinator | Brand Agency, Cape Town | 2019 - 2022
+• Coordinated 30+ marketing campaigns annually
+• Managed social media accounts with 100K+ followers
+• Created content for multiple platforms
+
+EDUCATION
+Bachelor of Arts in Marketing | University of Cape Town | 2015-2018
+Graduated Cum Laude
+
+SKILLS
+SEO/SEM, Google Analytics, Social Media, Content Strategy, Email Marketing, Adobe Creative Suite`;
+                    filename = 'modern_cv_template.docx';
+                    
+                } else if (type === 'entry') {
+                    content = `THABO NDLOVU
+📞 +27 73 456 7890 | ✉️ thabo.n@email.com
+Recent Graduate | BCom Marketing
+
+EDUCATION
+Bachelor of Commerce in Marketing | University of Johannesburg | 2021 - 2024
+• Graduated with Distinction (75% average)
+• Dean's Merit List 2023, 2024
+• Relevant coursework: Digital Marketing, Consumer Behavior, Market Research
+
+INTERNSHIP EXPERIENCE
+Marketing Intern | Digital Innovations, Johannesburg | Jan 2024 - Jun 2024
+• Assisted in managing social media accounts (Instagram, Facebook, LinkedIn)
+• Created 20+ content pieces for marketing campaigns
+• Analyzed campaign performance using Google Analytics
+• Contributed to weekly marketing strategy meetings
+
+VOLUNTEER EXPERIENCE
+Social Media Volunteer | Community Youth Organization | 2023 - 2024
+• Managed social media presence for non-profit organization
+• Increased followers by 50% through consistent engagement
+• Designed promotional materials for community events
+
+SKILLS
+Marketing: Social Media, Content Creation
+Tools: Canva, Google Analytics, MS Office
+Languages: English, Zulu, Afrikaans
+Soft Skills: Communication, Teamwork, Creativity
+
+ACHIEVEMENTS
+• Winner: University Marketing Case Competition 2024
+• Student Leadership Award 2023
+• Certified in Google Digital Marketing Fundamentals`;
+                    filename = 'entry_level_cv_template.docx';
+                    
+                } else if (type === 'technical') {
+                    content = `SIYA NKOSI
+Full Stack Developer | Software Engineer
+📞 +27 81 567 8901 | ✉️ siya.nkosi@email.com
+🐙 github.com/siyankosi | 🔗 linkedin.com/in/siyankosi
+
+TECHNICAL SUMMARY
+Full Stack Developer with 3 years of experience building web applications. Proficient in JavaScript, Python, and cloud technologies. Passionate about creating efficient, scalable solutions and writing clean code.
+
+TECHNICAL SKILLS
+Frontend: React.js, JavaScript/ES6, HTML5/CSS3, TypeScript
+Backend: Node.js, Python, Express.js, Django
+Tools: Git/GitHub, Docker, AWS, MongoDB
+
+PROJECTS
+E-Commerce Platform | React, Node.js, MongoDB
+• Built full-stack e-commerce application with user authentication
+• Implemented payment gateway integration (PayFast)
+• Deployed on AWS with 99.9% uptime
+
+Task Management App | Python, Django, PostgreSQL
+• Developed collaborative task management tool for teams
+• Implemented real-time updates using WebSockets
+• Containerized with Docker for easy deployment
+
+WORK EXPERIENCE
+Junior Developer | Tech Solutions, Johannesburg | 2023 - Present
+• Develop and maintain client websites and applications
+• Collaborate with design team to implement UI/UX improvements
+• Participate in code reviews and agile ceremonies
+
+CERTIFICATIONS
+• AWS Certified Cloud Practitioner (2024)
+• Meta Frontend Developer Certificate (2023)
+• Google IT Automation with Python (2023)`;
+                    filename = 'technical_cv_template.docx';
+                }
+                
+                // Create a blob and trigger download
+                const blob = new Blob([content], { type: 'application/msword' });
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+                
+                button.innerHTML = '<i class="fas fa-check"></i> Downloaded!';
+                button.style.background = '#28a745';
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.background = '';
+                    button.disabled = false;
+                }, 2000);
+            }, 1000);
+        }
+
+        function downloadCurrentTemplate() {
+            downloadTemplate(currentTemplate);
+        }
+
+        function downloadAllTemplates() {
+            const button = event.target;
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing ZIP...';
+            button.disabled = true;
+            
+            setTimeout(() => {
+                alert('📦 Download started: all_cv_templates.zip\n\nThis would download all 4 CV templates in a single ZIP file.');
+                
+                button.innerHTML = '<i class="fas fa-check"></i> Downloaded!';
+                button.style.background = '#28a745';
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.background = '';
+                    button.disabled = false;
+                }, 2000);
+            }, 1500);
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
