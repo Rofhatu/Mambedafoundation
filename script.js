@@ -257,11 +257,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (copyBtn) {
             copyBtn.addEventListener('click', function() {
                 const bankDetails = `MAMBEDA FOUNDATION BANK DETAILS:
-Bank: Standard Bank
-Account Holder: Mambeda Foundation NPC
-Account Number: 1234567890
-Branch Code: 051001
-Account Type: Current Account
+Bank: Capitec Bank
+Account Holder: Mambeda DR
+Account Number: 1264756362
+Branch Code: 470010
+Mobile Phone Transfer: 071 315 6305
 Reference: Your Name
 Email proof to: rmambeda@gmail.com`;
                 
@@ -462,4 +462,5 @@ Email proof to: rmambeda@gmail.com`;
         addBankTransferButton();
     }
 });
+
 
