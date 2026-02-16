@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="bank-details-container" style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #0077b6;">
                     <div class="bank-detail-item" style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #dee2e6;">
                         <div style="font-weight: 600; color: #495057; margin-bottom: 5px;">Bank Name</div>
-                        <div style="font-size: 18px; color: #212529;">Standard Bank</div>
+                        <div style="font-size: 18px; color: #212529;">Capitec Bank</div>
                     </div>
                     
                     <div class="bank-detail-item" style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #dee2e6;">
@@ -189,17 +189,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     <div class="bank-detail-item" style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #dee2e6;">
                         <div style="font-weight: 600; color: #495057; margin-bottom: 5px;">Account Number</div>
-                        <div style="font-size: 24px; color: #212529; font-weight: 700; letter-spacing: 2px;">123 456 7890</div>
+                        <div style="font-size: 24px; color: #212529; font-weight: 700; letter-spacing: 2px;">1264756362</div>
                     </div>
                     
                     <div class="bank-detail-item" style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #dee2e6;">
                         <div style="font-weight: 600; color: #495057; margin-bottom: 5px;">Branch Code</div>
-                        <div style="font-size: 18px; color: #212529;">051001</div>
+                        <div style="font-size: 18px; color: #212529;">470010</div>
                     </div>
                     
                     <div class="bank-detail-item" style="margin-bottom: 15px;">
-                        <div style="font-weight: 600; color: #495057; margin-bottom: 5px;">Account Type</div>
-                        <div style="font-size: 18px; color: #212529;">Current Account</div>
+                        <div style="font-weight: 600; color: #495057; margin-bottom: 5px;">Mobile phone Transfer</div>
+                        <div style="font-size: 18px; color: #212529;">071 315 6305</div>
                     </div>
                 </div>
                 
@@ -462,3 +462,4 @@ Email proof to: rmambeda@gmail.com`;
         addBankTransferButton();
     }
 });
+
