@@ -70,6 +70,51 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // ===== COMING SOON MODAL FOR SUCCESS STORIES AND ANNUAL REPORT =====
+    const comingSoonLinks = document.querySelectorAll('a[href="success-stories.html"], a[href="annual-report.html"]');
+    comingSoonLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            showComingSoonModal();
+        });
+    });
+
+    function showComingSoonModal() {
+        // Remove any existing modal
+        const existingModal = document.getElementById('coming-soon-modal');
+        if (existingModal) {
+            existingModal.remove();
+        }
+        
+        // Create modal
+        const modal = document.createElement('div');
+        modal.className = 'modal';
+        modal.id = 'coming-soon-modal';
+        modal.style.display = 'flex';
+        modal.style.zIndex = '2000';
+        
+        modal.innerHTML = `
+            <div class="modal-content" style="max-width: 400px; text-align: center;">
+                <span class="close-modal" onclick="this.closest('.modal').remove(); document.body.style.overflow='auto';">&times;</span>
+                <i class="fas fa-clock" style="font-size: 5rem; color: #ffc107; margin: 20px 0;"></i>
+                <h2 style="color: #023e8a; margin-bottom: 15px;">Coming Soon!</h2>
+                <p style="color: #666; margin-bottom: 30px;">We're working hard to bring you this content. Please check back later.</p>
+                <button class="btn btn-primary" onclick="this.closest('.modal').remove(); document.body.style.overflow='auto';">Got it!</button>
+            </div>
+        `;
+        
+        document.body.appendChild(modal);
+        document.body.style.overflow = 'hidden';
+        
+        // Close when clicking outside
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.remove();
+                document.body.style.overflow = 'auto';
+            }
+        });
+    }
+    
     // ===== RESOURCES LINKS FUNCTIONALITY =====
     document.querySelectorAll('.footer-column ul li a').forEach(link => {
         const text = link.textContent.trim();
