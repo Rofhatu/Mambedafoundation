@@ -14,59 +14,111 @@
             padding: 120px 0 60px;
             text-align: center;
         }
+        .helpline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
         .helpline-card {
             background: white;
-            border-radius: 20px;
-            padding: 50px;
-            margin: 60px auto;
-            max-width: 800px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            text-align: center;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #e74c3c;
         }
-        .helpline-number {
-            font-size: 4rem;
+        .helpline-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(231,76,60,0.15);
+        }
+        .helpline-icon {
+            font-size: 3rem;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+        .helpline-card h3 {
+            color: #023e8a;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .helpline-phone {
+            font-size: 1.8rem;
             font-weight: 700;
             color: #e74c3c;
-            margin: 30px 0;
-            letter-spacing: 2px;
+            margin: 20px 0;
+            letter-spacing: 1px;
         }
         .helpline-details {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin: 50px 0;
+            color: #666;
+            margin: 15px 0;
+            line-height: 1.8;
         }
-        .detail-item {
-            text-align: center;
+        .helpline-tag {
+            display: inline-block;
+            background: #f8d7da;
+            color: #721c24;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 10px 0;
         }
-        .detail-item i {
-            font-size: 2.5rem;
-            color: #e74c3c;
-            margin-bottom: 15px;
-        }
-        .call-btn {
+        .call-btn-small {
             background: linear-gradient(135deg, #e74c3c, #c0392b);
             color: white;
-            font-size: 1.5rem;
-            padding: 20px 40px;
+            padding: 12px 25px;
             border: none;
-            border-radius: 50px;
+            border-radius: 5px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            margin: 30px 0;
+            width: 100%;
+            margin-top: 15px;
+            font-size: 1.1rem;
         }
-        .call-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 20px 30px rgba(231,76,60,0.3);
+        .call-btn-small:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(231,76,60,0.3);
+        }
+        .info-section {
+            background: #e3f2fd;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 60px 0;
+            border-left: 4px solid #0077b6;
+        }
+        .info-section h3 {
+            color: #023e8a;
+            margin-bottom: 20px;
+        }
+        .info-section p {
+            color: #2c3e50;
+            line-height: 1.8;
+        }
+        .btn-back {
+            display: inline-block;
+            margin: 40px 0;
+            color: #0077b6;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .btn-back:hover {
+            text-decoration: underline;
         }
         .emergency-note {
             background: #fff3cd;
             border-left: 4px solid #ffc107;
             padding: 20px;
             border-radius: 10px;
-            text-align: left;
             margin-top: 40px;
+        }
+        .source-note {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #dee2e6;
         }
     </style>
 </head>
@@ -99,43 +151,117 @@
     <div class="resource-header">
         <div class="container">
             <h1><i class="fas fa-heartbeat"></i> Addiction Helpline</h1>
-            <p>24/7 Confidential Support for Substance Abuse and Addiction</p>
+            <p>24/7 Confidential Support for Substance Abuse and Addiction in South Africa</p>
         </div>
     </div>
 
     <div class="container">
-        <div class="helpline-card">
-            <i class="fas fa-phone-alt" style="font-size: 5rem; color: #e74c3c;"></i>
-            <div class="helpline-number">0800 123 456</div>
-            <p style="font-size: 1.2rem; color: #666;">Toll-Free • 24 Hours • Confidential</p>
-            
-            <div class="helpline-details">
-                <div class="detail-item">
-                    <i class="fas fa-comments"></i>
-                    <h4>SMS Support</h4>
-                    <p style="font-size: 1.2rem;">32312</p>
-                    <p style="color: #666;">Text "HELP"</p>
+        <!-- Department of Social Development -->
+        <div class="helpline-grid">
+            <div class="helpline-card">
+                <div class="helpline-icon">
+                    <i class="fas fa-phone-alt"></i>
                 </div>
-                <div class="detail-item">
-                    <i class="fas fa-envelope"></i>
-                    <h4>Email Support</h4>
-                    <p style="font-size: 1rem;">help@mambeda.org.za</p>
-                </div>
-                <div class="detail-item">
-                    <i class="fas fa-clock"></i>
-                    <h4>Response Time</h4>
-                    <p style="color: #666;">Within 5 minutes</p>
-                </div>
+                <span class="helpline-tag">24/7 • Free • Confidential</span>
+                <h3>Department of Social Development</h3>
+                <div class="helpline-phone">081 444 7000</div>
+                <p class="helpline-details">Substance Abuse Line • 24/7 support by phone and text message</p>
+                <button class="call-btn-small" onclick="window.location.href='tel:0814447000'">
+                    <i class="fas fa-phone-alt"></i> Call Now
+                </button>
             </div>
 
-            <button class="call-btn" onclick="window.location.href='tel:0800123456'">
-                <i class="fas fa-phone-alt"></i> Call Now
-            </button>
-
-            <div class="emergency-note">
-                <h4 style="color: #856404;"><i class="fas fa-exclamation-triangle"></i> Emergency</h4>
-                <p style="color: #856404;">If this is a medical emergency, please call 10177 immediately.</p>
+            <!-- Childline -->
+            <div class="helpline-card">
+                <div class="helpline-icon">
+                    <i class="fas fa-child"></i>
+                </div>
+                <span class="helpline-tag">24/7 • Free • Confidential</span>
+                <h3>Childline</h3>
+                <div class="helpline-phone">0800 055 555</div>
+                <p class="helpline-details">24/7 support for children and youth • Online chat available</p>
+                <button class="call-btn-small" onclick="window.location.href='tel:0800055555'">
+                    <i class="fas fa-phone-alt"></i> Call Now
+                </button>
             </div>
+
+            <!-- Narcotics Anonymous (NA) -->
+            <div class="helpline-card">
+                <div class="helpline-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <span class="helpline-tag">Fellowship • Meetings</span>
+                <h3>Narcotics Anonymous (NA)</h3>
+                <p class="helpline-details">Non-profit fellowship for recovering drug addicts • Regular meetings to help each other stay clean</p>
+                <p style="font-weight: 600; color: #023e8a;">Find meetings in your area</p>
+                <button class="call-btn-small" onclick="window.open('https://na.org.za', '_blank')">
+                    <i class="fas fa-globe"></i> Visit Website
+                </button>
+            </div>
+
+            <!-- Sanca -->
+            <div class="helpline-card">
+                <div class="helpline-icon">
+                    <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <span class="helpline-tag">Treatment • Rehabilitation</span>
+                <h3>Sanca</h3>
+                <p class="helpline-details">Prevention, treatment, and rehabilitation services for substance abuse</p>
+                <button class="call-btn-small" onclick="window.open('https://sanca.org.za', '_blank')">
+                    <i class="fas fa-globe"></i> Visit Website
+                </button>
+            </div>
+
+            <!-- SANCA -->
+            <div class="helpline-card">
+                <div class="helpline-icon">
+                    <i class="fas fa-hospital"></i>
+                </div>
+                <span class="helpline-tag">National • Leading Organization</span>
+                <h3>South African National Council on Alcoholism and Drug Dependence (SANCA)</h3>
+                <p class="helpline-details">Leading organization offering prevention, treatment, and rehabilitation services</p>
+                <button class="call-btn-small" onclick="window.open('https://sancanational.org.za', '_blank')">
+                    <i class="fas fa-globe"></i> Visit Website
+                </button>
+            </div>
+
+            <!-- Additional Support -->
+            <div class="helpline-card">
+                <div class="helpline-icon">
+                    <i class="fas fa-ambulance"></i>
+                </div>
+                <span class="helpline-tag">Emergency</span>
+                <h3>Medical Emergency</h3>
+                <div class="helpline-phone">10177</div>
+                <p class="helpline-details">For medical emergencies related to substance abuse</p>
+                <button class="call-btn-small" onclick="window.location.href='tel:10177'">
+                    <i class="fas fa-phone-alt"></i> Call Emergency
+                </button>
+            </div>
+        </div>
+
+        <!-- Information Section -->
+        <div class="info-section">
+            <h3><i class="fas fa-info-circle"></i> About These Resources</h3>
+            <p>These resources provide immediate support and guidance for individuals dealing with drug addiction in South Africa. All services are free and confidential unless otherwise stated.</p>
+            <ul style="margin-top: 20px; list-style: none;">
+                <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #28a745;"></i> <strong>Department of Social Development Substance Abuse Line:</strong> Offers 24/7, free and confidential support by phone and text message at 081-444-7000.</li>
+                <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #28a745;"></i> <strong>Childline:</strong> Provides 24/7, free and confidential support over phone and online chat. They assist with various issues, including substance abuse.</li>
+                <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #28a745;"></i> <strong>Narcotics Anonymous (NA):</strong> A non-profit fellowship for recovering drug addicts who meet regularly to help each other stay clean.</li>
+                <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #28a745;"></i> <strong>Sanca:</strong> Offers prevention, treatment, and rehabilitation services for substance abuse.</li>
+                <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #28a745;"></i> <strong>South African National Council on Alcoholism and Drug Dependence (SANCA):</strong> A leading organization that offers prevention, treatment, and rehabilitation services.</li>
+            </ul>
+        </div>
+
+        <!-- Emergency Note -->
+        <div class="emergency-note">
+            <h4 style="color: #856404;"><i class="fas fa-exclamation-triangle"></i> Emergency</h4>
+            <p style="color: #856404;">If this is a medical emergency, please call 10177 immediately. For immediate danger, call 10111 (SAPS).</p>
+        </div>
+
+        <!-- Sources -->
+        <div class="source-note">
+            <p><i class="fas fa-database"></i> Sources: Department of Social Development, Childline South Africa, Narcotics Anonymous South Africa, Sanca, SANCA National</p>
         </div>
 
         <div style="text-align: center; margin: 40px 0;">
@@ -155,6 +281,7 @@
                     <ul>
                         <li><a href="index.html#home">Home</a></li>
                         <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#programs">Programs</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
